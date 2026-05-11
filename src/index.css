@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-black text-white font-sans;
+}
+
+.light body {
+  @apply bg-white text-black;
+}
+
+
+
+:root {
+  --gold: #d4af37;
+}
+
+
+
+h1, h2, h3, h4 {
+  letter-spacing: 0.5px;
+}
+
+
+
+a {
+  @apply transition duration-200;
+}
+
+
+
+.gold-text {
+  color: var(--gold);
+}
+
+.gold-border {
+  border-color: var(--gold);
+}
+
+.gold-bg {
+  background-color: var(--gold);
+  color: black;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 10px;
+}
+
+
+
+::selection {
+  background: var(--gold);
+  color: black;
+}
+
+
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+
+
+.card {
+  @apply bg-black border border-gray-700 rounded-xl p-4 transition;
+}
+
+.card:hover {
+  @apply border-yellow-500 shadow-lg;
+}
+
+
+.light .card {
+  @apply bg-white border-gray-300;
+}
+
+
+
+.btn-gold {
+  background-color: var(--gold);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.btn-gold:hover {
+  opacity: 0.9;
+}
