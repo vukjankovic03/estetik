@@ -1,5 +1,3 @@
-
-
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
@@ -22,11 +20,11 @@ function Navbar() {
   }
 
   return (
-    <nav className="border-b border-gray-300 dark:border-gray-800">
+    <nav className="relative z-50 border-b border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-900">
 
       <div className="flex justify-between items-center px-6 py-4">
 
-        {/* LOGO */}
+     
         <Link to="/" className="flex items-center">
           <img
             src={logo}
@@ -35,7 +33,7 @@ function Navbar() {
           />
         </Link>
 
-        {/* DESKTOP MENU */}
+        
         <div className="hidden md:flex gap-6 items-center text-sm font-medium">
 
           <Link to="/" className="hover:text-yellow-500 transition">
@@ -72,9 +70,9 @@ function Navbar() {
           <ThemeToggle />
         </div>
 
-        {/* MOBILE BUTTON */}
+   
         <button
-          className="md:hidden text-3xl"
+          className="md:hidden text-3xl relative z-50"
           onClick={() => setOpen(!open)}
         >
           ☰
@@ -82,9 +80,9 @@ function Navbar() {
 
       </div>
 
-      {/* MOBILE MENU */}
+
       {open && (
-        <div className="md:hidden flex flex-col gap-4 px-6 pb-6 text-center text-sm font-medium bg-white dark:bg-gray-900">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-xl z-40 flex flex-col gap-4 px-6 py-6 text-center text-sm font-medium">
 
           <Link
             to="/"
