@@ -256,7 +256,7 @@ Danas, moj rad obuhvata kako svakodnevni rad sa klijentima, tako i edukaciju nov
      
       
       {openModal && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] px-4">
           <div className="bg-white dark:bg-gray-900 max-w-2xl p-6 rounded-xl overflow-y-auto max-h-[80vh]">
 
             <h2 className="text-xl font-bold mb-4 text-yellow-500">
